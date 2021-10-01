@@ -1,0 +1,16 @@
+name: Greetings
+
+on: [pull_request, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: 'Welcome! Thank you for participating! This will not have that much of an impact though, because this is just an exercise project.'
+        pr-message: 'Thank you for your contribution! But don´t get too excited if it gets accepted: This is only an exercise project.'
