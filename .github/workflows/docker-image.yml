@@ -19,4 +19,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag curly-sniffle:$(date +%s)
     - name: Push the Docker image
-      run: docker push knochenschmiede/curly-sniffle:$(date +%s)
+      run: docker push curly-sniffle:$(date +%s)
