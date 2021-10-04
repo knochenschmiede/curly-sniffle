@@ -17,6 +17,6 @@ jobs:
     - name: Login to Dockerhub
       run:  echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login --username "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
     - name: Build the Docker image
-      run: docker build  --file Dockerfile -t latest .
+      run: docker build  --file Dockerfile -t schroedingberg/latest .
     - name: Push the Docker image
-      run: docker push latest
+      run: docker push schroedingberg/latest
